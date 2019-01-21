@@ -1,22 +1,6 @@
-# eladmin
+# springboot-seed
 
-项目基于 Spring Boot 2.1.0 、 Spring boot Jpa、 Spring Security、redis、Vue的前后端分离的权限管理系统， 权限控制采用 RBAC（Role-Based Access Control，基于角色的访问控制），前端菜单支持动态路由
-
-#### 前端源码
-- 码云：[https://gitee.com/elunez/eladmin-qt](https://gitee.com/elunez/eladmin-qt)
-- github：[https://github.com/elunez/eladmin-qd](https://github.com/elunez/eladmin-qd)
-
-#### eladmin开发文档
-[http://docs.auauz.net/#/](http://docs.auauz.net/#/)
-
-#### 预览地址
-[http://auauz.net](http://auauz.net)
-
-##### 用户账号密码
-
-- 管理员： admin
-- 测试用户： test
-- 密码： 123456
+项目基于Spring Boot 2.1.0 、MyBatis Plus、 Spring Security、Redis的后台管理系统
 
 #### 开发环境
 
@@ -24,7 +8,7 @@
 - IDE：IntelliJ IDEA （后端）
 - IDE：JetBrains WebStorm  （前端）
 - 依赖管理：Maven
-- 数据库：MySQL 5.5.59
+- 数据库：MySQL 5.7.24
 
 #### 功能模块
 ```
@@ -53,22 +37,24 @@
 ```
 - common 公共包
     - aop 记录日志与接口限流
+    - config 线程池配置
     - exception 项目异常处理
     - mapper mapstruct的通用mapper
+    - mybatisplus mybatis plus自动填充类
     - redis redis缓存相关配置
     - swagger2 接口文档配置
     - utils 通用工具
 - core 核心包
-    - config  JWT的安全过滤器配置与跨域配置
-    - rest 用户授权的接口
+    - config JWT的安全过滤器配置与跨域配置
+    - controller 用户授权的接口
     - security 配置spring security
     - service 用户登录与权限的处理
     - utils 包含加密工具与JWT工具
 - monitor 系统监控
     - config 配置日志拦截器与WebSocket等
-    - domain 实体类
-    - repository 数据库操作
-    - rest 前端控制器
+    - controller 前端控制器    
+    - entity 实体类
+    - mapper 数据库操作
     - service 业务接口
         - impl 业务接口实现
         - query 业务查询
@@ -79,7 +65,7 @@
 #### 后端技术栈
 
 - 基础框架：Spring Boot 2.1.0.RELEASE
-- 持久层框架：Spring boot Jpa
+- 持久层框架：Mybatis Plus
 - 安全框架：Spring Security
 - 缓存框架：Redis
 - 日志打印：logback+log4jdbc
@@ -93,33 +79,4 @@
 - axios
 - element ui
 
-#### 系统预览
-<table>
-    <tr>
-        <td><img src="https://i.loli.net/2018/12/22/5c1e10c781eec.png"/></td>
-        <td><img src="https://i.loli.net/2018/12/22/5c1e10c7890ab.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://i.loli.net/2018/12/22/5c1e10c782a05.png"/></td>
-        <td><img src="https://i.loli.net/2018/12/22/5c1e10c7b089b.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://i.loli.net/2018/12/22/5c1e10c7b9c30.png"/></td>
-        <td><img src="https://i.loli.net/2018/12/22/5c1e10c7b7504.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://i.loli.net/2018/12/22/5c1e10c7a9f7d.png"/></td>
-		<td><img src="https://i.imgur.com/FzVaAlS.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://i.imgur.com/ah3X2HG.png"/></td>
-    </tr>
-</table>
-
-#### 反馈交流
-
-- QQ交流群：<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=90830191a40600e3a07acdcc4864890fca50c8e3ca1772e7e288a561d576f6c4"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Quella/el-admin" title="Quella/el-admin"></a>
-
-- 作者邮箱：elunez@qq.com
-# eladmin-mybatisplus
 # springboot-seed
